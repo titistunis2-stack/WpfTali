@@ -8,4 +8,13 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="Model">
+      <HintPath>..\..\..\source\repos\titistunis2-stack\TaliFitMe\Fitaliproject\bin\Debug\net8.0\Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Service">
+      <HintPath>..\..\..\source\repos\titistunis2-stack\TaliFitMe\Fitaliproject\bin\Debug\net8.0\Service.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
