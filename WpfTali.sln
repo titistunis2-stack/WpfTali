@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfTali", "WpfTali.csproj", "{7C7F73B3-F19B-4DB7-A4C6-451208E8AFAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C7F73B3-F19B-4DB7-A4C6-451208E8AFAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C7F73B3-F19B-4DB7-A4C6-451208E8AFAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C7F73B3-F19B-4DB7-A4C6-451208E8AFAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C7F73B3-F19B-4DB7-A4C6-451208E8AFAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D2CA364-7DC1-4D0A-AFAA-1E0E6577146C}
+	EndGlobalSection
+EndGlobal

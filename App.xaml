@@ -1,0 +1,11 @@
+﻿<Application x:Class="WpfTali.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfTali"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        
+            <ImageBrush x:Key="BackgroundBrush" ImageSource="C:\Users\User\source\repos\titistunis2-stack\TaliFitMe\FitaliDeWPF\images\picture.png" Stretch="Fill"/>
+    </Application.Resources>
+</Application>
+
