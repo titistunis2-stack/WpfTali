@@ -9,12 +9,38 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\AlexBrush-Regular.ttf" />
+    <None Remove="images\1.png" />
+    <None Remove="images\Fitali %283%29.png" />
+    <None Remove="images\signup.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="5.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Model">
       <HintPath>..\..\..\source\repos\titistunis2-stack\TaliFitMe\Fitaliproject\bin\Debug\net8.0\Model.dll</HintPath>
     </Reference>
     <Reference Include="Service">
       <HintPath>..\..\..\source\repos\titistunis2-stack\TaliFitMe\Fitaliproject\bin\Debug\net8.0\Service.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\AlexBrush-Regular.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\Fitali (3).png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\signup.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

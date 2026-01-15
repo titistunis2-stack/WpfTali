@@ -4,8 +4,6 @@
              xmlns:local="clr-namespace:WpfTali"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        
-            <ImageBrush x:Key="BackgroundBrush" ImageSource="C:\Users\User\source\repos\titistunis2-stack\TaliFitMe\FitaliDeWPF\images\picture.png" Stretch="Fill"/>
     </Application.Resources>
 </Application>
 
