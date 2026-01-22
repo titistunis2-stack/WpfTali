@@ -21,10 +21,10 @@
 
   <ItemGroup>
     <Reference Include="Model">
-      <HintPath>..\..\..\source\repos\titistunis2-stack\TaliFitMe\Fitaliproject\bin\Debug\net8.0\Model.dll</HintPath>
+      <HintPath>..\TaliFitMe\Fitaliproject\bin\Debug\net8.0\Model.dll</HintPath>
     </Reference>
     <Reference Include="Service">
-      <HintPath>..\..\..\source\repos\titistunis2-stack\TaliFitMe\Fitaliproject\bin\Debug\net8.0\Service.dll</HintPath>
+      <HintPath>..\TaliFitMe\Fitaliproject\bin\Debug\net8.0\Service.dll</HintPath>
     </Reference>
   </ItemGroup>
 
@@ -41,6 +41,18 @@
     <Resource Include="images\signup.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="images\homepage.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Pages\HomePageTe.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\HomePageTr.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 
 </Project>

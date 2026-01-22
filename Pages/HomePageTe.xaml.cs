@@ -12,27 +12,24 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Model;
 
 namespace WpfTali
 {
     /// <summary>
-    /// Interaction logic for LoginPage.xaml
+    /// Interaction logic for HomePageTe.xaml
     /// </summary>
-    public partial class LoginPage : Page
+    public partial class HomePageTe : Page
     {
-        public LoginPage()
+        public HomePageTe()
         {
             InitializeComponent();
         }
 
-        private void Login_Click(object sender, RoutedEventArgs e)
+        public HomePageTe(Trainee trainee)
         {
-            NavigationService.Navigate(new HomePage());
-        }
-
-        private void SignUpButton_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new RegistrationPage());
+            InitializeComponent();
+            
         }
     }
 }

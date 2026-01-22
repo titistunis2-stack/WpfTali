@@ -12,17 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Service;
 
 namespace WpfTali
 {
     /// <summary>
-    /// Interaction logic for HomePage.xaml
+    /// Interaction logic for RegistrationPage.xaml
     /// </summary>
-    public partial class HomePage : Page
+    public partial class RegistrationPage : Page
     {
-        public HomePage()
+        public RegistrationPage()
         {
             InitializeComponent();
+
         }
     }
 }
