@@ -26,5 +26,19 @@ namespace WpfTali
             InitializeComponent();
 
         }
+        private void SignUpButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new RegistrationPage());
+        }
+
+        private void LogInButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new LoginPage());   
+        }
+
+        private void AboutUsButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AboutUsPage());
+        }
     }
 }

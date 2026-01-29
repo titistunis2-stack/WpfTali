@@ -34,10 +34,7 @@
 
     <Grid Background="#F8F2F4">
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,30,50,0">
-            <Button Content="HOME" Foreground="#be5e84" Background="White" />
-            <Button Content="ABOUT US" Foreground="#be5e84" Background="White" />
-            <Button Content="CONTACT" Foreground="#be5e84" Background="White" />
-            <Button Content="SIGN UP" Foreground="#be5e84"  Background="White" />
+            <Button x:Name="Aboutus" Content="ABOUT US" Foreground="#be5e84" Background="White" Click="AboutUsButton_Click" FontSize="15"/>
         </StackPanel>
 
         <Border Background="White" CornerRadius="2" MaxWidth="900" MaxHeight="550" VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -111,10 +108,10 @@
 
                     <TextBlock Text="GENDER"  FontSize="15" Width="150" HorizontalAlignment="Left" TextAlignment="Center"/>
                     <ComboBox Style="{StaticResource ModernInputStyle}" Width="150" HorizontalAlignment="Left" BorderThickness="0,0,0,1.5"/>
-
-                    <Button Content="Create Account" FontFamily="/Fonts/#Alex Brush"  FontSize="18" Background="#f3cbdf" Foreground="White" Height="40" Margin="0,25,0,0"/>
-
-                    <TextBlock Text="Log in" FontFamily="/Fonts/#Alex Brush"  FontSize="18" Margin="0,10,0,0" Foreground="#f3cbdf" Cursor="Hand"/>
+                    <TextBlock Background="White"></TextBlock>
+                    <Button Content="Create Account" FontFamily="/Fonts/#Alex Brush"  FontSize="18" Background="#f3cbdf" Foreground="White" Height="40"/>
+                    <TextBlock Background="White"></TextBlock>
+                    <Button x:Name="LogIn" Content="Log In" FontFamily="/Fonts/#Alex Brush"  FontSize="18" Background="White" Height="20" Foreground="#f3cbdf" Click="LogInButton_Click"/>
                 </StackPanel>
 
                 <Grid Grid.Column="1" Margin="5">

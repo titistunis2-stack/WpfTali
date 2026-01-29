@@ -33,6 +33,7 @@ namespace WpfTali
             PersonList pl;
             TraineeList tl;
             TrainerList trl;
+            ManagerList managers;
             AppComment.Visibility = Visibility.Visible;
             AppComment.Text = "Thinking about this...";
             AppComment.Foreground = Brushes.Green;
@@ -41,6 +42,7 @@ namespace WpfTali
                 pl = await api.GetAllPerson();
                 tl = await api.GetAllTrainee();
                 trl = await api.GetAllTrainer();
+                managers= await api.GetAllManager();
             }
             catch (Exception ex)
             {
@@ -50,8 +52,7 @@ namespace WpfTali
 
             Person person = pl.FirstOrDefault(p => 
                 p.Email == emailText.Text &&
-                p.Pass == passwordText.Password
-                );
+                p.Pass == passwordText.Password);
             AppComment.Visibility = Visibility.Collapsed;
             if (person == null)
             {
@@ -60,6 +61,7 @@ namespace WpfTali
             }
             Trainee trainee = tl.FirstOrDefault(t => t.Id == person?.Id);
             Trainer trainer = trl.FirstOrDefault(tr => tr.Id == person?.Id);
+            Manager manager= managers.FirstOrDefault(manager => manager.Id == person?.Id);
             if (trainee != null)
             {
                 NavigationService.Navigate(new HomePageTe(trainee));
@@ -68,9 +70,13 @@ namespace WpfTali
             {
                 NavigationService.Navigate(new HomePageTr(trainer));
             }
+            else if (manager != null)
+            {
+                NavigationService.Navigate(new HomePageMa(manager));
+            }
             else
             {
-                RunError("User is neither Trainee nor Trainer!");
+                RunError("User is neither Trainee nor Trainer nor manager!");
                 return;
             }
         }

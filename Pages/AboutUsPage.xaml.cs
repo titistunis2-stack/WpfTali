@@ -12,24 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Model;
 
 namespace WpfTali
 {
     /// <summary>
-    /// Interaction logic for HomePage.xaml
+    /// Interaction logic for AboutUsPage.xaml
     /// </summary>
-    public partial class HomePageTr : Page
+    public partial class AboutUsPage : Page
     {
-        public HomePageTr()
+        public AboutUsPage()
         {
             InitializeComponent();
-        }
-
-        public HomePageTr(Trainer trainer)
-        {
-            InitializeComponent();
-
         }
     }
 }

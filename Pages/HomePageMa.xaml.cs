@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,21 +13,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Model;
 
 namespace WpfTali
 {
     /// <summary>
-    /// Interaction logic for HomePage.xaml
+    /// Interaction logic for HomePageMa.xaml
     /// </summary>
-    public partial class HomePageTr : Page
+    public partial class HomePageMa : Page
     {
-        public HomePageTr()
+        public HomePageMa()
         {
             InitializeComponent();
         }
-
-        public HomePageTr(Trainer trainer)
+        public HomePageMa(Manager manager)
         {
             InitializeComponent();
 
