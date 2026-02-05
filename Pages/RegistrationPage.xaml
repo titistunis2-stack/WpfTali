@@ -59,20 +59,20 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0">
-                            <TextBlock Text="private name" FontSize="15" TextAlignment="Center"/>
-                            <TextBox Style="{StaticResource ModernInputStyle}"/>
+                            <TextBlock Text="Private name" FontSize="15" TextAlignment="Center"/>
+                            <TextBox x:Name="pName" Style="{StaticResource ModernInputStyle}"/>
                         </StackPanel>
                         <StackPanel Grid.Column="2">
-                            <TextBlock Text="FAMILY NAME" FontSize="15" TextAlignment="Center" />
-                            <TextBox Style="{StaticResource ModernInputStyle}"/>
+                            <TextBlock Text="Famliy name" FontSize="15" TextAlignment="Center" />
+                            <TextBox x:Name="lName" Style="{StaticResource ModernInputStyle}"/>
                         </StackPanel>
                     </Grid>
 
                     <TextBlock Text="Email Address" FontSize="15" Margin="0,15,0,0" TextAlignment="Left"/>
-                    <TextBox Style="{StaticResource ModernInputStyle}" Margin="0,0,0,15"/>
+                    <TextBox x:Name="Email"  Style="{StaticResource ModernInputStyle}" Margin="0,0,0,15"/>
 
-                    <TextBlock Text="USER NAME" FontSize="15" HorizontalAlignment="Left"/>
-                    <TextBox Style="{StaticResource ModernInputStyle}" Width="150" HorizontalAlignment="Left" Margin="0,0,0,15"/>
+                    <TextBlock Text="User name" FontSize="15" HorizontalAlignment="Left"/>
+                    <TextBox x:Name="UserName" Style="{StaticResource ModernInputStyle}" Width="150" HorizontalAlignment="Left" Margin="0,0,0,15"/>
 
                     <Grid Margin="0,5">
                         <Grid.ColumnDefinitions>
@@ -82,11 +82,11 @@
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0">
                             <TextBlock Text="Password" FontSize="15" TextAlignment="Center"/>
-                            <PasswordBox Style="{StaticResource ModernInputStyle}" ToolTip="**********"/>
+                            <PasswordBox x:Name="Pass" Style="{StaticResource ModernInputStyle}" ToolTip="**********"/>
                         </StackPanel>
                         <StackPanel Grid.Column="2">
-                            <TextBlock Text="Confirm Password" FontSize="15" TextAlignment="Center"/>
-                            <PasswordBox Style="{StaticResource ModernInputStyle}" ToolTip="**********"/>
+                            <TextBlock Text="Telephone" FontSize="15" TextAlignment="Center"/>
+                            <TextBox x:Name="telephone" Style="{StaticResource ModernInputStyle}" Margin="0,0,0,15"/>
                         </StackPanel>
                     </Grid>
 
@@ -97,19 +97,45 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0">
-                            <TextBlock Text="BORN DATE" FontSize="15" TextAlignment="Center"/>
-                            <DatePicker BorderThickness="0,0,0,1.5" Background="Transparent" VerticalAlignment="Bottom"/>
+                            <TextBlock Text="Born date" FontSize="15" TextAlignment="Center"/>
+                            <DatePicker x:Name="bornDate" BorderThickness="0,0,0,1.5" Background="Transparent" VerticalAlignment="Bottom"/>
                         </StackPanel>
                         <StackPanel Grid.Column="2">
-                            <TextBlock Text="ID NUMBER" FontSize="15" TextAlignment="Center"/>
-                            <TextBox Style="{StaticResource ModernInputStyle}"/>
+                            <TextBlock Text="Id number" FontSize="15" TextAlignment="Center"/>
+                            <TextBox x:Name="idNum"  Style="{StaticResource ModernInputStyle}"/>
                         </StackPanel>
                     </Grid>
 
-                    <TextBlock Text="GENDER"  FontSize="15" Width="150" HorizontalAlignment="Left" TextAlignment="Center"/>
-                    <ComboBox Style="{StaticResource ModernInputStyle}" Width="150" HorizontalAlignment="Left" BorderThickness="0,0,0,1.5"/>
+                    <StackPanel Grid.Column="2" Orientation="Horizontal">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock x:Name="gender" Text="Gender"  FontSize="15" Width="150" TextAlignment="Center"/>
+                            <ComboBox Style="{StaticResource ModernInputStyle}" Width="120" HorizontalAlignment="Center" BorderThickness="0" FontSize="10" 
+                                 ItemsSource="{Binding Genders}"  
+                               SelectedItem="{Binding SelectedGender}"
+                               Padding="6,0"
+                               FontWeight="Bold">
+                                <ComboBoxItem Content="Male"/>
+                                <ComboBoxItem Content="Female"/>
+                                <ComboBoxItem Content="Else"/>
+                            </ComboBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical">
+
+                            <TextBlock Text="kind of user" FontSize="15" HorizontalAlignment="Center"/>
+                            <ComboBox Style="{StaticResource ModernInputStyle}" Width="120" HorizontalAlignment="Left" BorderThickness="0" FontSize="10" 
+                              ItemsSource="{Binding users}"  
+                                 SelectedItem="{Binding SelectedKindofuser}"
+                                 Padding="6,0"
+                                  FontWeight="Bold">
+                                <ComboBoxItem Content="Trainee"/>
+                                <ComboBoxItem Content="Trainer"/>
+                                <ComboBoxItem Content="Manager"/>
+                            </ComboBox>
+                        </StackPanel>
+                    </StackPanel>
+
                     <TextBlock Background="White"></TextBlock>
-                    <Button Content="Create Account" FontFamily="/Fonts/#Alex Brush"  FontSize="18" Background="#f3cbdf" Foreground="White" Height="40"/>
+                    <Button Content="Create Account" Click="SignUpButton_Click" FontFamily="/Fonts/#Alex Brush"  FontSize="18" Background="#f3cbdf" Foreground="White" Height="30"/>
                     <TextBlock Background="White"></TextBlock>
                     <Button x:Name="LogIn" Content="Log In" FontFamily="/Fonts/#Alex Brush"  FontSize="18" Background="White" Height="20" Foreground="#f3cbdf" Click="LogInButton_Click"/>
                 </StackPanel>

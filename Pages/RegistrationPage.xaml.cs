@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Model;
 using Service;
 
 namespace WpfTali
@@ -28,6 +29,27 @@ namespace WpfTali
         }
         private void SignUpButton_Click(object sender, RoutedEventArgs e)
         {
+            string a = pName.Text;
+            string b = lName.Text;
+            string c = Email.Text;
+            string d = UserName.Text;
+            string h;
+            string j = idNum.Text;
+            string k = gender.Text;
+            string m = telephone.Text;
+            string p = Pass.Password;
+
+
+            Trainee trainee = new Trainee() { First_name = a, Last_name = b, Email = c, Telephone = m, User_name = d, Pass = p, };
+
+            Apiservice apiservice = new Apiservice();
+            apiservice.InsertATrainee(trainee);
+            apiservice.InsertAManager(manager);
+            apiservice.InsertATrainer(trainer);
+
+
+
+
             NavigationService.Navigate(new RegistrationPage());
         }
 
