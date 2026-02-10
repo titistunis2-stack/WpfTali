@@ -109,7 +109,7 @@
                     <StackPanel Grid.Column="2" Orientation="Horizontal">
                         <StackPanel Orientation="Vertical">
                             <TextBlock x:Name="gender" Text="Gender"  FontSize="15" Width="150" TextAlignment="Center"/>
-                            <ComboBox Style="{StaticResource ModernInputStyle}" Width="120" HorizontalAlignment="Center" BorderThickness="0" FontSize="10" 
+                            <ComboBox  x:Name="GenderComboBox" Style="{StaticResource ModernInputStyle}" Width="120" HorizontalAlignment="Center" BorderThickness="0" FontSize="10" 
                                  ItemsSource="{Binding Genders}"  
                                SelectedItem="{Binding SelectedGender}"
                                Padding="6,0"
@@ -122,7 +122,7 @@
                         <StackPanel Orientation="Vertical">
 
                             <TextBlock Text="kind of user" FontSize="15" HorizontalAlignment="Center"/>
-                            <ComboBox Style="{StaticResource ModernInputStyle}" Width="120" HorizontalAlignment="Left" BorderThickness="0" FontSize="10" 
+                            <ComboBox  x:Name="UserTypeComboBox" Style="{StaticResource ModernInputStyle}" Width="120" HorizontalAlignment="Left" BorderThickness="0" FontSize="10" 
                               ItemsSource="{Binding users}"  
                                  SelectedItem="{Binding SelectedKindofuser}"
                                  Padding="6,0"

@@ -20,7 +20,7 @@
         <TextBlock Text="Welcome Dear Manager to Fitali!" 
               HorizontalAlignment="Center" 
               VerticalAlignment="Center" 
-              FontSize="60" 
+              FontSize="30" 
               FontFamily="/Fonts/#Alex Brush"
               Foreground="Black"/>
         <Grid.Background>

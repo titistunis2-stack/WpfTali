@@ -11,6 +11,7 @@
   <ItemGroup>
     <None Remove="Fonts\AlexBrush-Regular.ttf" />
     <None Remove="images\1.png" />
+    <None Remove="images\aboutusTali.png" />
     <None Remove="images\Fitali %283%29.png" />
     <None Remove="images\signup.png" />
   </ItemGroup>
@@ -33,6 +34,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="images\1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\aboutusTali.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="images\Fitali (3).png">
