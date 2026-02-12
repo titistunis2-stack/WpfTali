@@ -21,15 +21,24 @@ namespace WpfTali
     /// </summary>
     public partial class HomePageTe : Page
     {
-        public HomePageTe()
-        {
-            InitializeComponent();
-        }
 
         public HomePageTe(Trainee trainee)
         {
             InitializeComponent();
-            
+            List<ContantDetailsInform> contacts = new List<ContantDetailsInform>();
+            contacts.Add(new ContantDetailsInform
+            {
+                ContactfirstName = trainee.First_name,
+                ContactlastName = trainee.Last_name,
+                Contactemail = trainee.Email,
+                Contactphone = trainee.Telephone,
+                Contactborn = trainee.Born_date
+            }); 
+            foreach (ContantDetailsInform contact in contacts)
+            {
+                UserControlinformation userControl = new UserControlinformation(contact);
+                this.spContacts.Children.Add(userControl);
+            }
         }
     }
 }

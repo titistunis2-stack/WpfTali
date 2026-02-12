@@ -37,19 +37,13 @@ namespace WpfTali
             string phone = telephone.Text;
             string password = Pass.Password;
             string gender = (GenderComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
+            DatePicker born=bornDate;
             if (string.IsNullOrEmpty(gender))
             {
                 MessageBox.Show("Please select your gender");
                 return;
             }
 
-            //Trainee trainee = new Trainee() { First_name = a, Last_name = b, Email = c, Telephone = m, User_name = d, Pass = p, };
-            //Trainer trainer = new Trainer() { First_name = a, Last_name = b, Email = c, Telephone = m, User_name = d, Pass = p, };
-            //Manager manager = new Manager() { First_name = a, Last_name = b, Email = c, Telephone = m, User_name = d, Pass = p, };
-            //Apiservice apiservice = new Apiservice();
-            //apiservice.InsertATrainee(trainee);
-            //apiservice.InsertAManager(manager);
-            //apiservice.InsertATrainer(trainer);
             Apiservice apiservice = new Apiservice();
 
             // קבלת סוג המשתמש שנבחר
@@ -73,6 +67,7 @@ namespace WpfTali
                         Telephone = phone,
                         User_name = userName,
                         Pass = password
+
                     };
 
                     apiservice.InsertATrainee(trainee);

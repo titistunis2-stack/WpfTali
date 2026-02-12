@@ -24,6 +24,7 @@
                  FontSize="30" 
                  FontFamily="/Fonts/#Alex Brush"
                  Foreground="Black"/>
+        <StackPanel Grid.Row="1" x:Name="spContacts" Orientation="Horizontal"/>
         <Grid.Background>
             <ImageBrush ImageSource="/images/homepage.png" Stretch="UniformToFill"/>
         </Grid.Background>
