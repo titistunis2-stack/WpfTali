@@ -20,21 +20,23 @@ namespace WpfTali
     /// </summary>
     public partial class UserControlinformation : UserControl
     {
+        public event EventHandler MyEvent;
+        public ContantDetailsInform ContactData { get;  set; }
         public UserControlinformation()
         {
             InitializeComponent();
         }
-        public UserControlinformation(ContantDetailsInform contact)
+        public UserControlinformation(ContantDetailsInform contactData)
         {
-           InitializeComponent();
-            this.firstName.Text = contact.ContactfirstName;
-            this.lastName.Text = contact.ContactlastName;
-            this.email.Text = contact.Contactemail;
-            this.telephone.Text = contact.Contactphone;
-           this.GenderComboBox.SelectedItem = contact.Contactgender;
-            this.dateOfBirth.SelectedDate = contact.Contactborn;
-            this.passwordDisplay.Text = contact.Contactpassword;
-
+            InitializeComponent();
+            ContactData = contactData;
+            this.firstName.Text = contactData.ContactfirstName;
+            this.lastName.Text = contactData.ContactlastName;
+            this.email.Text = contactData.Contactemail;
+            this.telephone.Text = contactData.Contactphone;
+            this.genderDisplay.Text = contactData.Contactgender;
+            this.dateOfBirth.SelectedDate = contactData.Contactborn;
+            this.passwordDisplay.Text = contactData.Contactpassword;
         }
     }
 }

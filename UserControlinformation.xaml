@@ -1,70 +1,73 @@
 ﻿<UserControl x:Class="WpfTali.UserControlinformation"
-
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-
-             xmlns:local="clr-namespace:WpfTali"
-
              mc:Ignorable="d" 
+             d:DesignHeight="520" d:DesignWidth="350">
 
-             d:DesignHeight="450" d:DesignWidth="800">
-
-    <Border CornerRadius="20" Margin="15" Background="White">
+    <Border CornerRadius="25" Margin="10" Background="White">
         <Border.Effect>
-            <DropShadowEffect BlurRadius="15" Direction="270" ShadowDepth="2" Opacity="0.2"/>
+            <DropShadowEffect BlurRadius="20" Direction="270" ShadowDepth="2" Opacity="0.1"/>
         </Border.Effect>
 
-        <Border CornerRadius="20" BorderThickness="3" BorderBrush="#FFC1E3">
-            <StackPanel Margin="19,-3,19,-69">
+        <Border CornerRadius="25" BorderThickness="1.5" BorderBrush="#FCE4EC">
+            <StackPanel>
 
-                <TextBlock Text="My Profile" FontSize="28" FontWeight="Bold" 
-                           Foreground="#D81B60" HorizontalAlignment="Center" Margin="0,0,0,20"
-                            FontFamily="/Fonts/#Alex Brush"/>
-                <UniformGrid Columns="1" Height="371">
-                    <StackPanel Margin="0,5">
-                        <TextBlock Text="First Name" FontSize="11" Foreground="Pink" FontWeight="Bold"/>
-                        <TextBlock x:Name="firstName" Padding="8" Background="#FFF0F5" />
+                <TextBlock Text="My Profile" FontSize="24" FontWeight="Light" 
+                           Foreground="#D81B60" HorizontalAlignment="Center" Margin="0,0,0,15"
+                           FontFamily="Segoe UI Light"/>
+
+                <UniformGrid Columns="2" Margin="0,0,0,10">
+                    <StackPanel Margin="5">
+                        <TextBlock Text="FIRST NAME" FontSize="9" Foreground="#F06292" FontWeight="Bold" Margin="2,0"/>
+                        <Border Background="#FFF5F8" CornerRadius="8" Padding="10,6">
+                            <TextBlock x:Name="firstName" Text="-" FontSize="13" Foreground="#444"/>
+                        </Border>
                     </StackPanel>
-
-                    <StackPanel Margin="0,5">
-                        <TextBlock Text="Last Name" FontSize="11" Foreground="Pink" FontWeight="Bold" Margin="5,0"/>
-                        <TextBlock x:Name="lastName" Padding="8" Background="#FFF0F5" />
-                    </StackPanel>
-
-                    <StackPanel Margin="0,5">
-                        <TextBlock Text="Email" FontSize="11" Foreground="Pink" FontWeight="Bold" Margin="5,0"/>
-                        <TextBlock x:Name="email" Padding="8" Background="#FFF0F5" />
-                    </StackPanel>
-
-                    <StackPanel Margin="0,5">
-                        <TextBlock Text="Phone" FontSize="11" Foreground="Pink" FontWeight="Bold" Margin="5,0"/>
-                        <TextBlock x:Name="telephone" Padding="8" Background="#FFF0F5" />
-                    </StackPanel>
-
-                    <StackPanel Margin="0,5">
-                        <TextBlock Text="Password" FontSize="11" Foreground="Pink" FontWeight="Bold" Margin="5,0"/>
-                        <TextBlock x:Name="passwordDisplay" Padding="8" Background="#FFF0F5" />
-                    </StackPanel>
-
-                    <StackPanel>
-                        <TextBlock Text="Birthday" FontSize="11" Foreground="Pink" FontWeight="Bold" Margin="5,0"/>
-                        <DatePicker x:Name="dateOfBirth" BorderThickness="0,0,0,2" BorderBrush="#FFC1E3" Background="Transparent"/>
-                    </StackPanel>
-
-                    <StackPanel Margin="0,5">
-                        <TextBlock Text="Gender" FontSize="11" Foreground="Pink" FontWeight="Bold" Margin="5,0"/>
-                        <ComboBox x:Name="GenderComboBox" BorderThickness="0,0,0,2" BorderBrush="#FFC1E3">
-                            <ComboBoxItem Content="Male"/>
-                            <ComboBoxItem Content="Female"/>
-                            <ComboBoxItem Content="Other"/>
-                        </ComboBox>
+                    <StackPanel Margin="5">
+                        <TextBlock Text="LAST NAME" FontSize="9" Foreground="#F06292" FontWeight="Bold" Margin="2,0"/>
+                        <Border Background="#FFF5F8" CornerRadius="8" Padding="10,6">
+                            <TextBlock x:Name="lastName" Text="-" FontSize="13" Foreground="#444"/>
+                        </Border>
                     </StackPanel>
                 </UniformGrid>
+
+                <StackPanel Margin="5,0,5,10">
+                    <TextBlock Text="EMAIL ADDRESS" FontSize="9" Foreground="#F06292" FontWeight="Bold" Margin="2,0"/>
+                    <Border Background="#FFF5F8" CornerRadius="8" Padding="10,6">
+                        <TextBlock x:Name="email" Text="-" FontSize="13" Foreground="#444"/>
+                    </Border>
+                </StackPanel>
+
+                <UniformGrid Columns="2" Margin="0,0,0,10">
+                    <StackPanel Margin="5">
+                        <TextBlock Text="PHONE" FontSize="9" Foreground="#F06292" FontWeight="Bold" Margin="2,0"/>
+                        <Border Background="#FFF5F8" CornerRadius="8" Padding="10,6">
+                            <TextBlock x:Name="telephone" Text="-" FontSize="13" Foreground="#444"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Margin="5">
+                        <TextBlock Text="PASSWORD" FontSize="9" Foreground="#F06292" FontWeight="Bold" Margin="2,0"/>
+                        <Border Background="#FFF5F8" CornerRadius="8" Padding="10,6">
+                            <TextBlock x:Name="passwordDisplay" Text="****" FontSize="13" Foreground="#444"/>
+                        </Border>
+                    </StackPanel>
+                </UniformGrid>
+
+                <StackPanel Margin="5,0,5,10">
+                    <TextBlock Text="BIRTHDAY" FontSize="9" Foreground="#F06292" FontWeight="Bold" Margin="2,0"/>
+                    <DatePicker x:Name="dateOfBirth" IsHitTestVisible="False" Focusable="False"
+                                Background="Transparent" BorderThickness="0,0,0,1" BorderBrush="#FCE4EC"/>
+                </StackPanel>
+
+                <StackPanel Margin="5,0,5,10">
+                    <TextBlock Text="GENDER" FontSize="9" Foreground="#F06292" FontWeight="Bold" Margin="2,0"/>
+                    <Border Background="#FFF5F8" CornerRadius="8" Padding="10,6">
+                        <TextBlock x:Name="genderDisplay" Text="-" FontSize="13" Foreground="#444"/>
+                    </Border>
+                </StackPanel>
+
             </StackPanel>
         </Border>
     </Border>

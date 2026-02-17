@@ -42,7 +42,7 @@ namespace WpfTali
                 pl = await api.GetAllPerson();
                 tl = await api.GetAllTrainee();
                 trl = await api.GetAllTrainer();
-                managers= await api.GetAllManager();
+                managers = await api.GetAllManager();
             }
             catch (Exception ex)
             {
@@ -50,7 +50,7 @@ namespace WpfTali
                 return;
             }
 
-            Person person = pl.FirstOrDefault(p => 
+            Person person = pl.FirstOrDefault(p =>
                 p.Email == emailText.Text &&
                 p.Pass == passwordText.Password);
             AppComment.Visibility = Visibility.Collapsed;
@@ -61,7 +61,7 @@ namespace WpfTali
             }
             Trainee trainee = tl.FirstOrDefault(t => t.Id == person?.Id);
             Trainer trainer = trl.FirstOrDefault(tr => tr.Id == person?.Id);
-            Manager manager= managers.FirstOrDefault(manager => manager.Id == person?.Id);
+            Manager manager = managers.FirstOrDefault(manager => manager.Id == person?.Id);
             if (trainee != null)
             {
                 NavigationService.Navigate(new HomePageTe(trainee));
@@ -99,5 +99,13 @@ namespace WpfTali
         {
             NavigationService.Navigate(new RegistrationPage());
         }
+
+        //private void Skip(object sender, RoutedEventArgs e)
+        //{
+        //    emailText.Text = "danielandr2008@gmail.com";
+        //    passwordText.Password = "danik876";
+        //    NavigationService.Navigate(new HomePageTe());
+
+        //}
     }
 }
