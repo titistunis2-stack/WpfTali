@@ -19,8 +19,9 @@ namespace WpfTali
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new LoginPage());
-          
+
+            // This line guarantees the WelcomePage is loaded immediately
+            MainFrame.Navigate(new Uri("Pages/WelcomePage.xaml", UriKind.Relative));
         }
     }
 }

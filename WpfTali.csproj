@@ -14,6 +14,13 @@
     <None Remove="images\aboutusTali.png" />
     <None Remove="images\Fitali %283%29.png" />
     <None Remove="images\signup.png" />
+    <None Remove="videos\we_are.mp4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="videos\we_are.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -57,6 +64,12 @@
     <Compile Update="Pages\HomePageTr.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Pages\WelcomePage.xaml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
   </ItemGroup>
 
 </Project>
